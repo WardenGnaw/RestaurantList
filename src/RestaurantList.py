@@ -1,5 +1,5 @@
 from flask import Flask
-from Setup import SetupMySQL
+from src.Setup import SetupMySQL
 
 # Global Objects for Flask
 app = Flask(__name__)

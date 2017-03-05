@@ -1,0 +1,19 @@
+server {
+   listen 80;
+   server_name 107.170.232.146 *.wardengnaw.com wardengnaw.com;
+
+   location / {
+      include uwsgi_params;
+      uwsgi_pass unix:///home/andrew/RestaurantList/RestaurantList.sock;
+   }
+}
+
+server {
+   listen 80;
+   server_name *.andrewjwang.com andrewjwang.com;
+
+   location / {
+      include uwsgi_params;
+      uwsgi_pass unix:///home/andrew/RestaurantList/RestaurantList.sock;
+   }
+}

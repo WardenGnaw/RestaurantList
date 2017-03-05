@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve RestaurantList
+After=network.target
+
+[Service]
+User=andrew
+Group=www-data
+WorkingDirectory=/home/andrew/RestaurantList
+Envrionment="PATH=/home/andrew/RestaurantList/RestaurantListEnv/bin"
+ExecStart=/home/andrew/RestaurantList/RestaurantListEnv/bin/uwsgi --ini RestaurantList.ini
+
+[Install]
+WantedBy=multi-user.target
