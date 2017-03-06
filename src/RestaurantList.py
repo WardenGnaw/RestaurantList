@@ -15,4 +15,4 @@ def list_restaurants():
    conn = mysql.connect()
    cursor = conn.cursor()
    cursor.execute("SELECT * FROM Restaurant;")
-   return str(cursor.fetchall())
+   return render_template('restaurant_listing.html', restaurants=cursor.fetchall())
