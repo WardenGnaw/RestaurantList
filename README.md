@@ -21,15 +21,18 @@ There are the requirements to have this project running. This project uses Pytho
    * ```sudo apt-get update```
    * ```sudo apt-get install mysql-server```
    * ```sudo mysql_secure_installation```
+2. Install virtualenv
+   * ```pip3 install virtualenv```
 
 ### Windows
    TODO
 
 ## Setup
 1. In the project repo, create a virtualenv pointing to your python3.
-   ```virtualenv RestaurantListEnv --python=[path to python]3```
+   ```virtualenv RestaurantListEnv --python=[path to python3]```
 2. Activate the environment with ```source RestaurantListEnv/bin/activate```
 3. Download the requirements with ```pip install -r Requirements.txt```
 4. Run the database setup scripts ```./Scripts/setup-database.sh```
+   * This script sets up a database with a test user for development.
 5. Start the application with ```python3 wsgi.py```
 6. Leave the virtural envrionment with ```deactivate```

@@ -1,4 +1,5 @@
 #!/bin/bash
+# This script is used for initializing production builds.
 OSINFO=$(head -1 /etc/os-release)
 OSINFO=${OSINFO##*=}
 

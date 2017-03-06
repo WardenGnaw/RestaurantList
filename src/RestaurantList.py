@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from src.Setup import SetupMySQL
 
 # Global Objects for Flask
@@ -8,10 +8,10 @@ mysql = SetupMySQL(app)
 
 @app.route("/")
 def main():
-   return "<h1 style='color:blue'>Hello</h1>"
+   return render_template('index.html')
 
-@app.route("/andrew")
-def andrew():
+@app.route("/list")
+def list_restaurants():
    conn = mysql.connect()
    cursor = conn.cursor()
    cursor.execute("SELECT * FROM Restaurant;")
